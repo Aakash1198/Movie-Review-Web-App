@@ -1,0 +1,600 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,300,800);
+
+
+/*************************
+*******Typography******
+**************************/
+#home {
+  
+  background-image: linear-gradient(to bottom, rgba(93, 10, 10, 0.825), rgba(77, 70, 70, 0.79)), url(../images/tv-banshee-breaking-bad-vikings-wallpaper.jpg);
+}
+
+
+/***********************
+********* header ******
+************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked){
+  position: absolute;
+  left: -9999px;
+}
+.menu-icon:checked + label,
+.menu-icon:not(:checked) + label{
+  position: fixed;
+  top: 40px;
+  right: 75px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+.menu-icon:checked + label:before,
+.menu-icon:not(:checked) + label:before{
+  position: absolute;
+  content: '';
+  display: block;
+  width: 30px;
+  height: 20px;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  border-top: 2px solid #ececee;
+  border-bottom: 2px solid #ececee;
+  transition: border-width 100ms 1500ms ease, 
+              top 100ms 1600ms cubic-bezier(0.23, 1, 0.32, 1),
+              height 100ms 1600ms cubic-bezier(0.23, 1, 0.32, 1), 
+              background-color 200ms ease,
+              transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.menu-icon:checked + label:after,
+.menu-icon:not(:checked) + label:after{
+  position: absolute;
+  content: '';
+  display: block;
+  width: 22px;
+  height: 2px;
+  z-index: 20;
+  top: 10px;
+  right: 4px;
+  background-color: #ececee;
+  margin-top: -1px;
+  transition: width 100ms 1750ms ease, 
+              right 100ms 1750ms ease,
+              margin-top 100ms ease, 
+              transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.menu-icon:checked + label:before{
+  top: 10px;
+  transform: rotate(45deg);
+  height: 2px;
+  background-color: #ececee;
+  border-width: 0;
+  transition: border-width 100ms 340ms ease, 
+              top 100ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
+              height 100ms 300ms cubic-bezier(0.23, 1, 0.32, 1), 
+              background-color 200ms 500ms ease,
+              transform 200ms 1700ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.menu-icon:checked + label:after{
+  width: 30px;
+  margin-top: 0;
+  right: 0;
+  transform: rotate(-45deg);
+  transition: width 100ms ease,
+              right 100ms ease,  
+              margin-top 100ms 500ms ease, 
+              transform 200ms 1700ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.nav-menu{
+  position: fixed;
+  top: 30px;
+  right: 50px;
+  display: block;
+  /* width: 80px;
+  height: 80px; */
+  padding: 0;
+  margin: 0;
+  z-index: 9;
+  overflow: hidden;
+  box-shadow: 0 8px 30px 0 rgba(0,0,0,0.3);
+  background-color: #000000;
+  animation: border-transform 7s linear infinite;
+  transition: top 350ms 1100ms cubic-bezier(0.23, 1, 0.32, 1),  
+              right 350ms 1100ms cubic-bezier(0.23, 1, 0.32, 1),
+              transform 250ms 1100ms ease,
+              width 650ms 400ms cubic-bezier(0.23, 1, 0.32, 1),
+              height 650ms 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+@keyframes border-transform{
+    0%,100% { border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%; } 
+  14% { border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%; } 
+  28% { border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%; } 
+  42% { border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%; } 
+  56% { border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%; } 
+  70% { border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%; } 
+  84% { border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%; } 
+}
+
+.menu-icon:checked ~ .nav-menu {
+  animation-play-state: paused;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  width: 200%;
+  height: 200%;
+  transition: top 350ms 700ms cubic-bezier(0.23, 1, 0.32, 1),  
+              right 350ms 700ms cubic-bezier(0.23, 1, 0.32, 1),
+              transform 250ms 700ms ease,
+              width 750ms 1000ms cubic-bezier(0.23, 1, 0.32, 1),
+              height 750ms 1000ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.nav-menu ul{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  z-index: 6;
+  text-align: center;
+  transform: translateY(-50%);
+  list-style: none;
+}
+.nav-menu ul li{
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 10px 0;
+  text-align: center;
+  list-style: none;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(30px);
+  transition: all 250ms linear;
+}
+.nav-menu ul li:nth-child(1){
+  transition-delay: 200ms;
+}
+.nav-menu ul li:nth-child(2){
+  transition-delay: 150ms;
+}
+.nav-menu ul li:nth-child(3){
+  transition-delay: 100ms;
+}
+.nav-menu ul li:nth-child(4){
+  transition-delay: 50ms;
+}
+.nav-menu ul li a{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 9vh;
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-weight: 800;
+  display: inline-block;
+  position: relative;
+  color: #ececee;
+  transition: all 250ms linear;
+}
+.nav-menu ul li a:hover{
+  text-decoration: none;
+  color: #ffeba7;
+}
+.nav-menu ul li a:after{
+  display: block;
+  position: absolute;
+  top: 50%;
+  content: '';
+  height: 2vh;
+  margin-top: -1vh;
+  width: 0;
+  left: 0;
+  /* background-color: #353746; */
+  opacity: 0.8;
+  transition: width 250ms linear;
+}
+.nav-menu ul li a:hover:after{
+  width: 100%;
+}
+
+
+.menu-icon:checked ~ .nav-menu  ul li {
+  pointer-events: auto;
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 350ms ease,
+              transform 250ms ease;
+}
+.menu-icon:checked ~ .nav-menu ul li:nth-child(1){
+  transition-delay: 1400ms;
+}
+.menu-icon:checked ~ .nav-menu ul li:nth-child(2){
+  transition-delay: 1480ms;
+}
+.menu-icon:checked ~ .nav-menu ul li:nth-child(3){
+  transition-delay: 1560ms;
+}
+.menu-icon:checked ~ .nav-menu ul li:nth-child(4){
+  transition-delay: 1640ms;
+}
+
+@media screen and (max-width: 991px) {
+  .menu-icon:checked + label,
+  .menu-icon:not(:checked) + label{
+    right: 55px;
+  }
+  
+  .nav-menu{
+    right: 30px;
+  }
+  h1{
+    font-size: 9vw;
+    -webkit-text-stroke: 2px transparent;
+    text-stroke: 2px transparent;
+    -webkit-text-fill-color: #ffeba7;
+    text-fill-color: #ffeba7;
+    color: #ffeba7;
+  }
+  .nav-menu ul li a{
+    font-size: 8vh;
+  }
+}
+
+#header .search{
+	display: inline-block;
+  }
+  header{
+	position: fixed;
+	width:100%;
+	z-index: 10;
+  }
+  
+  .navbar>.container .navbar-brand{
+	margin-left: 0;
+	-webkit-clip-path: url(#mask);
+	clip-path: url(#mask);
+	margin: 0 auto;
+  }
+  
+  
+  .navbar-brand {
+	padding: 0;
+	margin:0;
+  }
+  
+  .navbar {
+	border-radius: 0;
+	margin-bottom: 0;
+	background: #151515;
+	padding: 0;
+	
+  }
+  
+   .navbar-nav{
+	margin-top: 30px;
+   }
+  
+  .navbar-nav>li{
+	margin-left: 35px;
+	padding-bottom: 28px;
+  }
+  
+  .navbar-inverse .navbar-nav > li > a {
+	padding: 5px 12px;
+	margin: 0;
+	border-radius: 3px;
+	color: #fff;
+	line-height: 24px;
+	display: inline-block;
+  }
+  
+  .navbar-inverse .navbar-nav > li > a:hover{
+	  background-color: #c52d2f;
+	color: #fff;
+  }
+  
+  .navbar-inverse {
+	border: none;
+  }
+  
+  .navbar-inverse .navbar-brand {
+	font-size: 36px;
+	line-height: 50px;
+	color: #fff;
+  }
+  
+  .navbar-inverse .navbar-nav > .active > a,
+  .navbar-inverse .navbar-nav > .active > a:hover,
+  .navbar-inverse .navbar-nav > .active > a:focus,
+  .navbar-inverse .navbar-nav > .open > a,
+  .navbar-inverse .navbar-nav > .open > a:hover,
+  .navbar-inverse .navbar-nav > .open > a:focus {
+	background-color: #c52d2f;
+	color: #fff;
+  }
+  
+  .navbar-inverse .navbar-nav .dropdown-menu {
+	background-color: rgba(0,0,0,.85);
+	-webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125);
+	-moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125);
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125);
+	border: 0;
+	padding: 0;
+	margin-top: 0;
+	border-top: 0;
+	border-radius: 0;
+	left: 0;
+  }
+  
+  .navbar-inverse .navbar-nav .dropdown-menu:before{
+	position: absolute;
+	top:0;
+  }
+  
+  .navbar-inverse .navbar-nav .dropdown-menu > li > a {
+	padding: 8px 15px;
+	color: #fff;
+  }
+  
+  .navbar-inverse .navbar-nav .dropdown-menu > li:hover > a,
+  .navbar-inverse .navbar-nav .dropdown-menu > li:focus > a,
+  .navbar-inverse .navbar-nav .dropdown-menu > li.active > a {
+	background-color: #c52d2f;
+	color: #fff;
+  }
+  
+  .navbar-inverse .navbar-nav .dropdown-menu > li:last-child > a {
+	border-radius: 0 0 3px 3px;
+  }
+  
+  .navbar-inverse .navbar-nav .dropdown-menu > li.divider {
+	background-color: transparent;
+  }
+  
+  .navbar-inverse .navbar-collapse,
+  .navbar-inverse .navbar-form {
+	border-top: 0;
+	padding-bottom: 0;
+  }
+/***********************
+********* section ******
+************************/
+section{
+    clear: left;
+    float: none;
+    width: 100%;
+    text-align: center;
+    background-image:linear-gradient(to bottom, rgba(93, 10, 10, 0.825), rgba(77, 70, 70, 0.79)), url(../images/tv-banshee-breaking-bad-vikings-wallpaper.jpg);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5rem 0 10rem;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+
+}
+
+/*Styling the container1 class which cotains a form in it*/
+.container1{
+    width: 740px;
+    border-radius: 15px;
+    box-shadow: 0px 15px 20px rgba(254, 254, 254, 0.658);
+    justify-content: center;
+    margin-top: 80px;
+
+}
+/*Styling the title of the container1 class */
+.container1 .title{
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 100px;
+  color:#ffff;
+  user-select: none;
+  border-radius: 15px 15px 0 0;
+  background: linear-gradient(-170deg, #c52d2f, #ffffff37);
+}
+
+/*Styling the form of the container1 class, input fields,labels, signup-link in the form div classes */
+.container1 form{
+  padding: 10px 30px 50px 30px;
+  height: auto;
+}
+.container1 form .field{
+	height: 70px;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+.container1 form .field input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 10px;
+  border: 1px solid lightgrey;
+  border-radius: 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+
+}
+.container1 form .field input:focus,
+form .field input:valid, .field select:focus, .field select:valid{
+  border-color: #c52d2f; 
+}
+.container1 form .field label{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    color: #999999;
+    font-weight: 100;
+    font-size: 15px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+form .field input:focus ~ label,
+form .field input:valid ~ label,
+form .field select:focus ~ label,
+form .field select:valid ~ label{
+  top: 0%;
+  font-size:30px;
+  color: #c52d2f;
+  background: #ffffff;
+  transform: translateY(-50%);
+
+}
+
+form .field input[type="submit"]{
+  color: #fff;
+  border: none;
+  padding-left: 0;
+  margin-top: -10px;
+  font-size: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  background: linear-gradient(-170deg, #c52d2f, #ffffff37);
+  transition: all 0.3s ease;
+}
+
+form .content{
+	display: flex;
+	width: 100%;
+	height: 50px;
+	font-size: 20px;
+	align-items: center;
+	justify-content: space-around;
+  }
+  form .content .checkbox{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+
+  form .content input{
+	width: 15px;
+	height: 15px;
+	background: red;
+  }
+  form .content input[type="checkbox"]{
+	position: relative;
+	left: 0px;
+  }
+  form .content label{
+	color: #ffffff;
+	user-select: none;
+	padding-left: 5px;
+  }
+  form .content .pass-link{
+	color:#ffffff;
+  }
+form .field input[type="submit"]:active{
+  transform: scale(0.95);
+}
+
+form .signup-link{
+  color: #ffffff;
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+form .signup-link a{
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+form .signup-link a:hover{
+  text-decoration: underline;
+}
+  
+
+/***********************
+********* Footer ******
+************************/
+#bottom {
+	background: #f5f5f5;
+	border-bottom: 5px solid #c52d2f;
+	font-size: 14px;
+  }
+  
+  #bottom h3 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	font-size:22px;
+	color: #000;
+  }
+  
+  #bottom ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+  }
+  
+  #bottom ul li {
+	display: block;
+	padding: 5px 0;
+  }
+  
+  #bottom ul li a {
+	color: #808080;
+  }
+  
+  #bottom ul li a:hover {
+	color: #c52d2f;
+  }
+  
+  #bottom .widget {
+	margin-bottom: 0;
+  }
+  
+  #footer {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	color: #fff;
+	background: #2e2e2e;
+   
+  }
+  
+  #footer a {
+	color: #fff;
+  }
+  
+  #footer a:hover {
+	color: #c52d2f;
+  }
+  
+  #footer ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+  }
+  
+  #footer ul > li {
+	display: inline-block;
+	margin-left: 15px;
+  }
+  #main-slider .img-responsive {
+	max-width: 900PX !important;
+	margin-left: -30% !important;
+  
+  }
+  
+  .navbar-header img {
+  width: 240px !important;
+  }
+  
+  

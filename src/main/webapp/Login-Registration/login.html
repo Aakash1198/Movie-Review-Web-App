@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>CinemaScope</title>
+	
+	<!-- core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/animate.min.css" rel="stylesheet">
+    <link href="../css/prettyPhoto.css" rel="stylesheet">
+    <link href="./logincss.css" rel="stylesheet">
+    <link href="../css/responsive.css" rel="stylesheet">
+         
+    <link rel="shortcut icon" href="../images/favicon.ico">
+   
+
+</head>
+
+<body class="homepage">
+
+    <header id="header">
+        <nav class="navbar navbar-inverse" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <svg version="1.2" width="0" height="0" viewBox="0 0 740 600">
+                        <defs>
+                          <clipPath id="mask">
+                            <rect x="0" y="0" width="900" height="800" fill="#000" id="cool_shape">
+                              <animate attributeType="XML" xlink:href="#cool_shape" attributeName="x" from="-900" to="0"
+                                  dur="5s" repeatCount="indefinite"/>
+                            </rect>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <a class="navbar-brand" href="index.html"><img src="https://images.cooltext.com/5649297.png" width="360" height="99" alt="CinemaScope" /></a>
+                </div>
+				
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about-us.html">About Us</a></li>
+                        
+                        <!-- <li><a href="pricing.html">Pricing Table</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li> -->
+                        <!-- <li><a href="team.html">Our Team</a></li> -->
+                        <li><a href="../contact-us.html">Contact Us</a></li>
+                        <li class="active"><a href="login.html">Login</a></li>
+                        <li><input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
+                            <label for="menu-icon"></label>
+                            <nav class="nav-menu"> 		
+                                <ul class="pt-5">
+                                  <li><a href="#">Movies</a></li>
+                                  <li><a href="#">TVSHOWS</a></li>
+                                  <li><a href="#">AWARDS & EVENTS</a></li>
+                                  <li><a href="#">CELEBRITIES</a></li>
+                                </ul>
+                            </nav></li>                        
+                    </ul>
+                    
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+    </header><!--/header-->
+
+    <section>
+        <!-- Wrapper class with title class and form with field class, content class, pass-link, signup-link, checkbox divisions  -->
+          <div class="container1">
+            <div class="title">Login Form</div>
+              <form action="./index.html">
+              <div class="field">
+                <input type="text" required>
+                <label>Email Address</label>
+              </div>
+              <div class="field">
+                <input type="password" required>
+                <label>Password</label>
+              </div>
+              <div class="content">
+                <div class="checkbox">
+                  <input type="checkbox" id="remember-me">
+                  <label for="remember-me">Remember me</label>
+                </div>
+                <div class="pass-link"><a href="#">Forgot password?</a></div>
+              </div>
+              <div class="field">
+                 <input type="submit" value="Login">
+              </div>
+              <div class="signup-link">Not a member? <a href="./login-signup.html">Signup now</a></div>
+             
+              </div>
+            </form>
+          </div>
+      </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="midnight-blue">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-6">
+                  &copy; 2023 <a target="_blank" href="index.html">CinemaScope</a>. All Rights Reserved.
+              </div>
+              <div class="col-sm-6">
+                  <ul class="pull-right">
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">About Us</a></li>
+                      <li><a href="#">Faq</a></li>
+                      <li><a href="#">Contact Us</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </footer><!--/#footer-->
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.prettyPhoto.js"></script>
+  <script src="js/jquery.isotope.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/wow.min.js"></script>
+</body>
+</html>
