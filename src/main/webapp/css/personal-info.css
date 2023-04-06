@@ -177,3 +177,7 @@ h2{
 	top:20px;
 	position: relative;
 }
+
+#passwordError {
+        color: red;
+      }

@@ -1,14 +1,24 @@
-function changePassword() {
-	let newPassword = document.getElementById('new-password').value;
-	let confirmPassword = document.getElementById('confirm-password').value;
-
-	if (newPassword == '' || confirmPassword == '') {
-		alert('Please enter both new password and confirm password');
-	} else if (newPassword != confirmPassword) {
-		alert('New password and confirm password do not match');
-	} else {
-		alert('Password changed successfully');
-		document.getElementById('new-password').value = '';
-		document.getElementById('confirm-password').value = '';
-	}
-}
+function validatePassword() {
+        var currentPassword = document.getElementById("current-password").value;
+        var newPassword = document.getElementById("new-password").value;
+        var confirmPassword = document.getElementById("confirm-password").value;
+        var passwordError = document.getElementById("passwordError");
+        if (newPassword != confirmPassword) {
+          passwordError.innerHTML = "Passwords do not match";
+          return false;
+        } else {
+          passwordError.innerHTML = "";
+          // Code to save the new password goes here
+          return true;
+        }
+      }
+      function checkPasswordsMatch() {
+        var newPassword = document.getElementById("new-password").value;
+        var confirmPassword = document.getElementById("confirm-password").value;
+        var passwordError = document.getElementById("passwordError");
+        if (newPassword != confirmPassword) {
+          passwordError.innerHTML = "Passwords do not match";
+        } else {
+          passwordError.innerHTML = "";
+        }
+      }
