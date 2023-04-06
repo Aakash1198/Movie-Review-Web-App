@@ -1,362 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>CinemaScope</title>
-	
-	<!-- core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
-         
-    <link rel="shortcut icon" href="images/favicon.ico">
-    
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>CinemaScope</title>
+
+<!-- core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/animate.min.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+      
+<link rel="shortcut icon" href="images/favicon.ico">
+<script src="js/script.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.isotope.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/wow.min.js"></script>
+
 </head>
 
 <body class="homepage">
 
-    <header id="header">
-        <nav class="navbar navbar-inverse" role="banner">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <svg version="1.2" width="0" height="0" viewBox="0 0 740 600">
-                        <defs>
-                          <clipPath id="mask">
-                            <rect x="0" y="0" width="900" height="800" fill="#000" id="cool_shape">
-                              <animate attributeType="XML" xlink:href="#cool_shape" attributeName="x" from="-900" to="0"
-                                  dur="5s" repeatCount="indefinite"/>
-                            </rect>
-                          </clipPath>
-                        </defs>
-                      </svg>
-                    <a class="navbar-brand" href="index.html"><img src="https://images.cooltext.com/5649297.png" width="360" height="99" alt="CinemaScope" /></a>
-                </div>
-				
-                <div class="collapse navbar-collapse navbar-right">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="about-us.html">About Us</a></li>                      
-                        <li><a href="contact-us.html">Contact Us</a></li>
-                        <li><a href="./Login-Registration/login.html">Login</a></li>
-                        <li><input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
-                            <label for="menu-icon"></label>
-                            <nav class="nav-menu"> 		
-                                <ul class="pt-5">
-                                    <li><a href="#">MOVIES</a></li>
-                                    <li><a href="#">TVSHOWS</a></li>
-                                    <li><a href="#">AWARDS & EVENTS</a></li>
-                                    <li><a href="#">CELEBRITIES</a></li>
-                                </ul>
-                            </nav></li>                        
-                    </ul>
-                    
-                </div>
-            </div><!--/.container-->
-        </nav><!--/nav-->
-		
-    </header><!--/header-->
-    <div class="container-fluid d-flex align-items-center mb-5 py-5" id="home" style="min-height: 100vh;">
-        <div class="container wow fadeInDown">
-            <div class="row1 align-items-center">
-                <div class="col-lg-7 text-center">   
-                    <h3 class="text-white font-weight-normal mb-3" style="-webkit-text-stroke: 1px #ffffff">WELCOME</h3>
-                    <h1 class="display-3 text-uppercase mb-2" style="-webkit-text-stroke: 4px #ffffff;">Ultimate destination for insightful and informative reviews of the latest films and TV series</h1>
-                        <button class="cn"><a href="./Login-Registration/login-signup.html">JOIN US</a></button>
-                </div>        
-        </div>
+<header id="header">
+    <nav class="navbar navbar-inverse" role="banner">
+        <div class="container">
+          
+            <div class="navbar-header">                    
+                <svg version="1.2" width="0" height="0" viewBox="0 0 740 600">
+                    <defs>
+                      <clipPath id="mask">
+                        <rect x="0" y="0" width="900" height="800" fill="#000" id="cool_shape">
+                          <animate attributeType="XML" xlink:href="#cool_shape" attributeName="x" from="-900" to="0"
+                              dur="5s" repeatCount="indefinite"/>
+                        </rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                <a class="navbar-brand" href="index.html"><img src="https://images.cooltext.com/5649297.png" width="360" height="99" alt="CinemaScope" /></a>
+            </div>
+    
+            <div class="collapse navbar-collapse navbar-right">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="./Login-Registration/login.html">Login</a></li>
+                    <li>
+                      <button class="logo" onclick="openNav()">☰</button>
+                        <div id="mySidebar" class="sidebar" onclick="closeNav()">
+                          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                          <ul>
+                            <li><a href="./personal-info.html">My account</a></li>
+                            <li><a href="./index.html"  class="current">Home</a></li>                                
+                                            <li><div class="dropdown">
+                                                <div class="drpbtn" onmouseover="myFunction2()"><a href ="./movies.html">Movies</a> </div>
+                                                <div id="dropdown-content">
+                                                    <a href="./movies.html">Latest</a>
+                                                    <a href="./movies.html">Top Rated</a>
+                                                </div>
+                                                </div>
+                                            </li>
+                                            
+                                            <li><div class="dropdown">
+                                            
+                                              <div class="drpbtn" onmouseover="myFunction3()"><a href="./tvshows.html">Tv Shows</a></div>
+                                              <div id="dropdown-content1">
+                                                  <a href="./tvshows.html">Latest</a>
+                                                  <a href="./tvshows.html">Top Rated</a>
+                                              </div>
+                                              </div>
+                                          </li>
+                                            
+                      </li>                        
+                </ul>
+                
+            </div>
+        </div><!--/.container-->
+    </nav><!--/nav-->
+
+</header><!--/header-->
+<div class="container-fluid d-flex align-items-center mb-5 py-5" id="home" style="min-height: 100vh;">
+    <div class="container wow fadeInDown">
+        <div class="row1 align-items-center">
+            <div class="col-lg-7 text-center">   
+                <h3 class="text-white font-weight-normal mb-3" style="-webkit-text-stroke: 1px #ffffff">WELCOME</h3>
+                <h1 class="display-3 text-uppercase mb-2" style="-webkit-text-stroke: 4px #ffffff;">Ultimate destination for insightful and informative reviews of the latest films and TV series</h1>
+                    <button class="cn"><a href="./Login-Registration/login-signup.html">JOIN US</a></button>
+            </div>        
     </div>
-  
+</div>
+
 
 
 <!-- banner-bottom -->
 <div id="main">
-    <div id="content">
-      <div class="box wow fadeInDown">
-        <div class="head">
-          <h2>LATEST MOVIES</h2>
-          <p class="text-right"><a href="#">See all</a></p>
-        </div>
-        <div class="movie">
-          <div class="movie-image"> <span class="play" style="display: none;"><span class="name">Extrapolations</span></span> <a href="#"><img src="./images/mov1.jpg" alt=""></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
-            </div>
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="movie">
-          <div class="movie-image"> <span class="play" style="display: none;"><span class="name">SPIDER MAN 2</span></span> <a href="#"><img src="./images/mov2.jpg" alt=""></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
-            </div>
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="movie">
-          <div class="movie-image"> <span class="play" style="display: none;"><span class="name">SPIDER MAN 3</span></span> <a href="#"><img src="./images/mov3.jpg" alt=""></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
-            </div>
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="movie">
-          <div class="movie-image"> <span class="play" style="display: none;"><span class="name">VALKYRIE</span></span> <a href="#"><img src="./images/mov4.jpg" alt=""></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
-            </div>
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="movie">
-          <div class="movie-image"> <span class="play"><span class="name">GLADIATOR</span></span> <a href="#"><img src="./images/mov5.jpg" alt=""></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
-            </div>
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="movie last">
-          <div class="movie-image"> <span class="play"><span class="name">ICE AGE</span></span> <a href="#"><img src="./images/mov6.jpg" alt=""></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
-            </div>
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="cl">&nbsp;</div>
+<div id="con">
+  <div class="box wow fadeInDown">
+    <div class="head">
+      <h2>TV SHOWS</h2>
+      <p class="text-right"><a href="./tvshows.html">See all</a></p>
+    </div>
+<!-- Movie Carousel -->
+    <div id="wrapper">
+    <div id="carousel_1">
+    <div id="content_1">
+      <div id ="tile">
+      <img class="item"  src="./images/tvshw1.jpg"/>
+      <h3 class="title">Cheat <span class="imdbRatingPlugin" data-user="ur163103401" data-title="tt26451131" data-style="p3"><a href="https://www.imdb.com/title/tt26451131/?ref_=plg_rt_1"><img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png" alt="Cheat (2023) on IMDb" />
+      </a></span><script>(function(d,s,id){var js,stags=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}js=d.createElement(s);js.id=id;js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";stags.parentNode.insertBefore(js,stags);})(document,"script","imdb-rating-api");</script></h3>
       </div>
-      <div class="box wow fadeInDown">
-        <div class="head">
-          <h2>LATEST TVSHOWS</h2>
-          <p class="text-right"><a href="#">See all</a></p>
-        </div>
-        <div class="movie">
-          <div class="movie-image"> <span class="play"><span class="name">TRANSFORMERS</span></span> <a href="#"><img src="./images/tvshw1.jpg" alt=""></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
-            </div>
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="movie">
-          <div class="movie-image"> <span class="play"><span class="name">MAGNETO</span></span> <a href="#"><img src="./images/tvshw2.jpg" alt=""></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
-            </div>
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="movie">
-          <div class="movie-image"> <span class="play"><span class="name">KUNG FU PANDA</span></span> <a href="#"><img src="./images/tvshw3.jpg" alt=""></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
-            </div>
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="movie">
-          <div class="movie-image"> <span class="play" style="display: none;"><span class="name">EAGLE EYE</span></span> <a href="#"><img src="./images/tvshw4.jpg" alt=""></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
-            </div>
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="movie">
-          <div class="movie-image"> <span class="play"><span class="name">NARNIA</span></span> <a href="#"><img src="./images/tvshw5.jpg" alt=""></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
-            </div>
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="movie last">
-          <div class="movie-image"> <span class="play"><span class="name">ANGELS &amp; DEMONS</span></span> <a href="#"><img src="./images/tvshw6.jpg" alt=""></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
-            </div>
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="cl">&nbsp;</div>
+      <div id ="tile">
+      <img class="item " src="./images/tvshw2.jpg"/>
+      <h3 class="title">The Mandalorian<span class="imdbRatingPlugin" data-user="ur163103401" data-title="tt8111088" data-style="p3"><a href="https://www.imdb.com/title/tt8111088/?ref_=plg_rt_1"><img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png" alt="The Mandalorian (2019) on IMDb" />
+      </a></span><script>(function(d,s,id){var js,stags=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}js=d.createElement(s);js.id=id;js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";stags.parentNode.insertBefore(js,stags);})(document,"script","imdb-rating-api");</script></h3>
       </div>
-      <div class="box wow fadeInDown">
-        <div class="head">
-          <h2>CELEBRITIES</h2>
-          <p class="text-right"><a href="#">See all</a></p>
-        </div>
-        <div class="movie">
-          <div class="movie-image"> <span class="play"><span class="name">HOUSE</span></span> <a href="#"><img src="./images/celeb1.jpg" alt=""></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
-            </div>
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="movie">
-          <div class="movie-image"> <span class="play"><span class="name">VACANCY</span></span> <a href="#"><img src="./images/celeb2.jpg" alt=""></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
-            </div>
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="movie">
-          <div class="movie-image"> <span class="play"><span class="name">MIRRORS</span></span> <a href="#"><img src="./images/celeb3.jpg" alt=""></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
-            </div>
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="movie">
-          <div class="movie-image"> <span class="play"><span class="name">THE KINGDOM</span></span> <a href="#"><img src="./images/celeb4.jpg" alt=""></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
-            </div>
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="movie">
-          <div class="movie-image"> <span class="play"><span class="name">MOTIVES</span></span> <a href="#"><img src="./images/celeb5.jpg" alt=""></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
-            </div>
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="movie last">
-          <div class="movie-image"> <span class="play"><span class="name">THE PRESTIGE</span></span> <a href="#"><img src="./images/celeb6.jpg" alt=""></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
-            </div>
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="cl">&nbsp;</div>
+      <div id ="tile">
+      <img class="item " src="./images/tvshw3.jpg"/>
+      <h3 class="title">True Lies <span class="imdbRatingPlugin" data-user="ur163103401" data-title="tt7380366" data-style="p3"><a href="https://www.imdb.com/title/tt7380366/?ref_=plg_rt_1"><img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png" alt="True Lies (2023) on IMDb" />
+      </a></span><script>(function(d,s,id){var js,stags=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}js=d.createElement(s);js.id=id;js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";stags.parentNode.insertBefore(js,stags);})(document,"script","imdb-rating-api");</script></h3>
+      </div>
+      <div id ="tile">
+      <img class="item " src="./images/tvshw4.jpg"/>
+      <h3 class="title">Murder Mystery - 2 <span class="imdbRatingPlugin" data-user="ur163103401" data-title="tt15255288" data-style="p3"><a href="https://www.imdb.com/title/tt15255288/?ref_=plg_rt_1"><img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png" alt="Murder Mystery 2 (2023) on IMDb" />
+      </a></span><script>(function(d,s,id){var js,stags=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}js=d.createElement(s);js.id=id;js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";stags.parentNode.insertBefore(js,stags);})(document,"script","imdb-rating-api");</script></h3>
+      </div>
+      <div id ="tile">
+      <img class="item " src="./images/tvshw5.jpg"/>
+      <h3 class="title">The Night Agent <span class="imdbRatingPlugin" data-user="ur163103401" data-title="tt13918776" data-style="p3"><a href="https://www.imdb.com/title/tt13918776/?ref_=plg_rt_1"><img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png" alt="The Night Agent (2023) on IMDb" />
+      </a></span><script>(function(d,s,id){var js,stags=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}js=d.createElement(s);js.id=id;js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";stags.parentNode.insertBefore(js,stags);})(document,"script","imdb-rating-api");</script></h3>
+      </div>
+      <div id ="tile">
+      <img class="item " src="./images/tvshw6.jpg"/>
+      <h3 class="title">Extrapolations <span class="imdbRatingPlugin" data-user="ur163103401" data-title="tt13821126" data-style="p3"><a href="https://www.imdb.com/title/tt13821126/?ref_=plg_rt_1"><img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png" alt="Extrapolations (2023) on IMDb" />
+      </a></span><script>(function(d,s,id){var js,stags=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}js=d.createElement(s);js.id=id;js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";stags.parentNode.insertBefore(js,stags);})(document,"script","imdb-rating-api");</script></h3>
+      </div>
+      <div id ="tile">
+      <img class="item " src="./images/tvshw7.jpg"/>
+      <h3 class="title">Class of '07 <span class="imdbRatingPlugin" data-user="ur163103401" data-title="tt14671640" data-style="p3"><a href="https://www.imdb.com/title/tt14671640/?ref_=plg_rt_1"><img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png" alt="Class of '07 (2023) on IMDb" />
+      </a></span><script>(function(d,s,id){var js,stags=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}js=d.createElement(s);js.id=id;js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";stags.parentNode.insertBefore(js,stags);})(document,"script","imdb-rating-api");</script></h3>
+      </div>
+      <div id ="tile">
+      <img class="item " src="./images/tvshw8.jpg"/>
+      <h3 class="title">Black Clover <span class="imdbRatingPlugin" data-user="ur163103401" data-title="tt22868844" data-style="p3"><a href="https://www.imdb.com/title/tt22868844/?ref_=plg_rt_1"><img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png" alt="Black Clover: Sword of the Wizard King (2023) on IMDb" />
+      </a></span><script>(function(d,s,id){var js,stags=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}js=d.createElement(s);js.id=id;js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";stags.parentNode.insertBefore(js,stags);})(document,"script","imdb-rating-api");</script></h3>
+      </div>
+      <div id ="tile">
+      <img class="item " src="./images/tvshw9.jpg"/>
+      <h3 class="title">Copycat Killer <span class="imdbRatingPlugin" data-user="ur163103401" data-title="tt18382028" data-style="p3"><a href="https://www.imdb.com/title/tt18382028/?ref_=plg_rt_1"><img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png" alt="Copycat Killer (2023) on IMDb" />
+      </a></span><script>(function(d,s,id){var js,stags=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}js=d.createElement(s);js.id=id;js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";stags.parentNode.insertBefore(js,stags);})(document,"script","imdb-rating-api");</script></h3>
       </div>
     </div>
     </div>
+    <button id="prev_1">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+    >
+    <path fill="none" d="M0 0h24v24H0V0z" />
+    <path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
+    </svg>
+    </button>
+    <button id="next_1">
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+      >
+    <path fill="none" d="M0 0h24v24H0V0z" />
+    <path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" />
+    </svg>
+    </button>
+    </div>
+    </div>
 
-<!-- //banner-bottom -->
+<!-- TV Shows Carousel -->
+  <div class="box wow fadeInDown">
+    <div class="head">
+      <h2>MOVIES</h2>
+      <p class="text-right"><a href="#">See all</a></p>
+    </div>
 
-
-    <section id="bottom">
-        <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <div class="widget">
-                        <h3>Company</h3>
-                        <ul>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Meet the team</a></li>
-                            <li><a href="#">Copyright</a></li>
-                            <li><a href="#">Terms of use</a></li>
-                            <li><a href="#">Privacy policy</a></li>
-                            <li><a href="#">Contact us</a></li>
-                        </ul>
-                    </div>    
-                </div><!--/.col-md-3-->
-
-                <div class="col-md-3 col-sm-6">
-                    <div class="widget">
-                        <h3>Support</h3>
-                        <ul>
-                            <li><a href="#">Faq</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Forum</a></li>
-                            <li><a href="#">Documentation</a></li>
-                        </ul>
-                    </div>    
-                </div><!--/.col-md-3-->
-
-                <div class="col-md-3 col-sm-6">
-                    <div class="widget">
-                        <h3>Developers</h3>
-                        <ul>
-                            <li><a href="#">Web Development</a></li>
-                            <li><a href="#">SEO Marketing</a></li>
-                            <li><a href="#">Theme</a></li>
-                            <li><a href="#">Development</a></li>
-                            <li><a href="#">Email Marketing</a></li>
-                            <li><a href="#">Plugin Development</a></li>
-                            <li><a href="#">Article Writing</a></li>
-                        </ul>
-                    </div>    
-                </div><!--/.col-md-3-->
-
-                <div class="col-md-3 col-sm-6">
-                    <div class="widget">
-                        <h3>Our Partners</h3>
-                        <ul>
-                            <li><a href="#">Adipisicing Elit</a></li>
-                            <li><a href="#">Eiusmod</a></li>
-                            <li><a href="#">Tempor</a></li>
-                            <li><a href="#">Veniam</a></li>
-                            <li><a href="#">Exercitation</a></li>
-                            <li><a href="#">Ullamco</a></li>
-                            <li><a href="#">Laboris</a></li>
-                        </ul>
-                    </div>    
-                </div><!--/.col-md-3-->
+    <div id="wrapper">
+      <div id="carousel_2">
+        <div id="content_2">
+          <div id ="tile">
+            <a href="./info/mov1.html"><img class="item"  src="./images/mov1.jpg"/></a>
+            <h3 class="title">Cheat <span class="imdbRatingPlugin" data-user="ur163103401" data-title="tt26451131" data-style="p3"><a href="https://www.imdb.com/title/tt26451131/?ref_=plg_rt_1"><img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png" alt="Cheat (2023) on IMDb" />
+            </a></span><script>(function(d,s,id){var js,stags=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}js=d.createElement(s);js.id=id;js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";stags.parentNode.insertBefore(js,stags);})(document,"script","imdb-rating-api");</script></h3>
+            </div>
+            <div id ="tile">
+              <a href="./info/mov2.html"><img class="item"  src="./images/mov2.jpg"/></a>
+            <h3 class="title">The Mandalorian<span class="imdbRatingPlugin" data-user="ur163103401" data-title="tt8111088" data-style="p3"><a href="https://www.imdb.com/title/tt8111088/?ref_=plg_rt_1"><img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png" alt="The Mandalorian (2019) on IMDb" />
+            </a></span><script>(function(d,s,id){var js,stags=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}js=d.createElement(s);js.id=id;js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";stags.parentNode.insertBefore(js,stags);})(document,"script","imdb-rating-api");</script></h3>
+            </div>
+            <div id ="tile">
+              <a href="./info/mov3.html"><img class="item"  src="./images/mov3.jpg"/></a>
+            <h3 class="title">True Lies <span class="imdbRatingPlugin" data-user="ur163103401" data-title="tt7380366" data-style="p3"><a href="https://www.imdb.com/title/tt7380366/?ref_=plg_rt_1"><img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png" alt="True Lies (2023) on IMDb" />
+            </a></span><script>(function(d,s,id){var js,stags=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}js=d.createElement(s);js.id=id;js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";stags.parentNode.insertBefore(js,stags);})(document,"script","imdb-rating-api");</script></h3>
+            </div>
+            <div id ="tile">
+              <a href="./info/mov4.html"><img class="item"  src="./images/mov4.jpg"/></a>
+            <h3 class="title">Murder Mystery - 2 <span class="imdbRatingPlugin" data-user="ur163103401" data-title="tt15255288" data-style="p3"><a href="https://www.imdb.com/title/tt15255288/?ref_=plg_rt_1"><img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png" alt="Murder Mystery 2 (2023) on IMDb" />
+            </a></span><script>(function(d,s,id){var js,stags=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}js=d.createElement(s);js.id=id;js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";stags.parentNode.insertBefore(js,stags);})(document,"script","imdb-rating-api");</script></h3>
+            </div>
+            <div id ="tile">
+              <a href="./info/mov5.html"><img class="item"  src="./images/mov5.jpg"/></a>
+            <h3 class="title">The Night Agent <span class="imdbRatingPlugin" data-user="ur163103401" data-title="tt13918776" data-style="p3"><a href="https://www.imdb.com/title/tt13918776/?ref_=plg_rt_1"><img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png" alt="The Night Agent (2023) on IMDb" />
+            </a></span><script>(function(d,s,id){var js,stags=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}js=d.createElement(s);js.id=id;js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";stags.parentNode.insertBefore(js,stags);})(document,"script","imdb-rating-api");</script></h3>
+            </div>
+            <div id ="tile">
+            <a href="./info/mov6.html"><img class="item"  src="./images/mov6.jpg"/></a>
+            <h3 class="title">Extrapolations <span class="imdbRatingPlugin" data-user="ur163103401" data-title="tt13821126" data-style="p3"><a href="https://www.imdb.com/title/tt13821126/?ref_=plg_rt_1"><img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png" alt="Extrapolations (2023) on IMDb" />
+            </a></span><script>(function(d,s,id){var js,stags=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}js=d.createElement(s);js.id=id;js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";stags.parentNode.insertBefore(js,stags);})(document,"script","imdb-rating-api");</script></h3>
+            </div>
+            <div id ="tile">
+            <a href="./info/mov7.html"><img class="item"  src="./images/mov7.jpg"/></a>
+            <h3 class="title">Class of '07 <span class="imdbRatingPlugin" data-user="ur163103401" data-title="tt14671640" data-style="p3"><a href="https://www.imdb.com/title/tt14671640/?ref_=plg_rt_1"><img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png" alt="Class of '07 (2023) on IMDb" />
+            </a></span><script>(function(d,s,id){var js,stags=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}js=d.createElement(s);js.id=id;js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";stags.parentNode.insertBefore(js,stags);})(document,"script","imdb-rating-api");</script></h3>
+            </div>
+            <div id ="tile">
+            <a href="./info/mov8.html"><img class="item"  src="./images/mov8.jpg"/></a>
+            <h3 class="title">Black Clover <span class="imdbRatingPlugin" data-user="ur163103401" data-title="tt22868844" data-style="p3"><a href="https://www.imdb.com/title/tt22868844/?ref_=plg_rt_1"><img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png" alt="Black Clover: Sword of the Wizard King (2023) on IMDb" />
+            </a></span><script>(function(d,s,id){var js,stags=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}js=d.createElement(s);js.id=id;js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";stags.parentNode.insertBefore(js,stags);})(document,"script","imdb-rating-api");</script></h3>
+            </div>
+            <div id ="tile">
+            <a href="./info/mov9.html"><img class="item"  src="./images/mov9.jpg"/></a>
+            <h3 class="title">Copycat Killer <span class="imdbRatingPlugin" data-user="ur163103401" data-title="tt18382028" data-style="p3"><a href="https://www.imdb.com/title/tt18382028/?ref_=plg_rt_1"><img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png" alt="Copycat Killer (2023) on IMDb" />
+            </a></span><script>(function(d,s,id){var js,stags=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}js=d.createElement(s);js.id=id;js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";stags.parentNode.insertBefore(js,stags);})(document,"script","imdb-rating-api");</script></h3>
             </div>
         </div>
-    </section><!--/#bottom-->
+      </div>
+      <button id="prev_2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path fill="none" d="M0 0h24v24H0V0z" />
+          <path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
+        </svg>
+      </button>
+      <button id="next_2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path fill="none" d="M0 0h24v24H0V0z" />
+          <path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" />
+        </svg>
+      </button>
+    </div>
+    </div>
+</div>
+</div>
 
-    <footer id="footer" class="midnight-blue">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    &copy; 2023 <a target="_blank" href="index.html">CinemaScope</a>. All Rights Reserved.
-                </div>
-                <div class="col-sm-6">
-                    <ul class="pull-right">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Faq</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
+
+<!-- Footer -->
+<footer id="footer" class="midnight-blue">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                &copy; 2023 <a target="_blank" href="index.html">CinemaScope</a>. All Rights Reserved.
+            </div>
+            <div class="col-sm-6">
+                <ul class="pull-right">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Faq</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
             </div>
         </div>
-    </footer><!--/#footer-->
-
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/wow.min.js"></script>
+    </div>
+</footer><!--/#footer-->
 </body>
 </html>

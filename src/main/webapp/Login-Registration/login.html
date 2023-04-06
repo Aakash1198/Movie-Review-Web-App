@@ -8,83 +8,97 @@
     <title>CinemaScope</title>
 	
 	<!-- core CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/font-awesome.min.css" rel="stylesheet">
-    <link href="../css/animate.min.css" rel="stylesheet">
-    <link href="../css/prettyPhoto.css" rel="stylesheet">
-    <link href="./logincss.css" rel="stylesheet">
-    <link href="../css/responsive.css" rel="stylesheet">
-         
-    <link rel="shortcut icon" href="../images/favicon.ico">
-   
-
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/font-awesome.min.css" rel="stylesheet">
+  <link href="../css/animate.min.css" rel="stylesheet">
+  <link href="../css/main.css" rel="stylesheet">
+  <link href="../css/responsive.css" rel="stylesheet">
+  <link href="./logincss.css" rel="stylesheet">
+       
+  <link rel="shortcut icon" href="../images/favicon.ico">
+  <script src="../js/script.js"></script>
+  <script src="../js/jquery.js"></script>
+  <script src="../../js/bootstrap.min.js"></script>
+  <script src="../js/jquery.isotope.min.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/wow.min.js"></script>
+  
+  <script src="./login.js"></script>
 </head>
 
 <body class="homepage">
 
-    <header id="header">
-        <nav class="navbar navbar-inverse" role="banner">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <svg version="1.2" width="0" height="0" viewBox="0 0 740 600">
-                        <defs>
-                          <clipPath id="mask">
-                            <rect x="0" y="0" width="900" height="800" fill="#000" id="cool_shape">
-                              <animate attributeType="XML" xlink:href="#cool_shape" attributeName="x" from="-900" to="0"
-                                  dur="5s" repeatCount="indefinite"/>
-                            </rect>
-                          </clipPath>
-                        </defs>
-                      </svg>
-                      <a class="navbar-brand" href="index.html"><img src="https://images.cooltext.com/5649297.png" width="360" height="99" alt="CinemaScope" /></a>
-                </div>
-				
-                <div class="collapse navbar-collapse navbar-right">
-                    <ul class="nav navbar-nav">
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../about-us.html">About Us</a></li>
-                        
-                        <!-- <li><a href="pricing.html">Pricing Table</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li> -->
-                        <!-- <li><a href="team.html">Our Team</a></li> -->
-                        <li><a href="../contact-us.html">Contact Us</a></li>
-                        <li class="active"><a href="login.html">Login</a></li>
-                        <li><input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
-                            <label for="menu-icon"></label>
-                            <nav class="nav-menu"> 		
-                                <ul class="pt-5">
-                                  <li><a href="#">Movies</a></li>
-                                  <li><a href="#">TVSHOWS</a></li>
-                                  <li><a href="#">AWARDS & EVENTS</a></li>
-                                  <li><a href="#">CELEBRITIES</a></li>
-                                </ul>
-                            </nav></li>                        
-                    </ul>
-                    
-                </div>
-            </div><!--/.container-->
-        </nav><!--/nav-->
-    </header><!--/header-->
+  <header id="header">
+    <nav class="navbar navbar-inverse" role="banner">
+        <div class="container">
+          
+            <div class="navbar-header">                    
+                <svg version="1.2" width="0" height="0" viewBox="0 0 740 600">
+                    <defs>
+                      <clipPath id="mask">
+                        <rect x="0" y="0" width="900" height="800" fill="#000" id="cool_shape">
+                          <animate attributeType="XML" xlink:href="#cool_shape" attributeName="x" from="-900" to="0"
+                              dur="5s" repeatCount="indefinite"/>
+                        </rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                <a class="navbar-brand" href="../index.html"><img src="https://images.cooltext.com/5649297.png" width="360" height="99" alt="CinemaScope" /></a>
+            </div>
+    
+            <div class="collapse navbar-collapse navbar-right">
+              <ul class="nav navbar-nav">
+                  <li><a href="../index.html">Home</a></li>
+                  <li class="active"><a href="./login.html">Login</a></li>
+                  <li>
+                    <button class="logo" onclick="openNav()">☰</button>
+                      <div id="mySidebar" class="sidebar" onclick="closeNav()">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                          <ul>
+                        <li><a href="../personal-info.html">My account</a></li>
+                        <li><a href="../index.html"  class="current">Home</a></li>
+                        <li><div class="dropdown">
+                            <div class="drpbtn" onmouseover="myFunction2()"><a href="../tvshows.html">Tv Shows</a></div>
+                            <div id="dropdown-content">
+                                <a href="../tvshows.html">Latest</a>
+                                <a href="../tvshows.html">Top Rated</a>
+                            </div>
+                            </div>
+                        </li>
+                        <li><div class="dropdown">
+                            <div class="drpbtn" onmouseover="myFunction3()"><a href="../movies.html">Movies</a></div>
+                          <div id="dropdown-content1">
+                              <a href="../movies.html">Latest</a>
+                              <a href="../movies.html">Top Rated</a>
+                          </div>
+                          </div>
+                      </li>
+                                        
+                  </li>                        
+            </ul>
+                
+            </div>
+        </div><!--/.container-->
+    </nav><!--/nav-->
 
+</header><!--/header-->
     <section>
         <!-- Wrapper class with title class and form with field class, content class, pass-link, signup-link, checkbox divisions  -->
           <div class="container1">
             <div class="title">Login Form</div>
-              <form action="./index.html">
-              <div class="field">
-                <input type="text" required>
-                <label>Email Address</label>
-              </div>
-              <div class="field">
-                <input type="password" required>
-                <label>Password</label>
-              </div>
+              <form action="/login" onsubmit="return validateLoginForm()" id="login-form" method="post">
+                
+                  <div class="field">
+                      <label for="email">Email:</label>
+                      <input type="email" id="email" name="email" onmouseout="return validateLoginForm()"" required>
+                      <span id="emailError"></span>
+                  </div>
+                  <div class="field">
+                      <label for="password">Password:</label>
+                      <input type="password" id="password" name="password" onmouseout="return validateLoginForm()" required>
+                      <span id="passwordError"></span>
+                  </div>
+                  
               <div class="content">
                 <div class="checkbox">
                   <input type="checkbox" id="remember-me">
@@ -129,3 +143,4 @@
   <script src="js/wow.min.js"></script>
 </body>
 </html>
+
