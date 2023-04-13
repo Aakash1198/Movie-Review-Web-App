@@ -6,7 +6,11 @@
 **************************/
 #home {
   
+<<<<<<< HEAD
   background-image: linear-gradient(to bottom, rgba(93, 10, 10, 0.825), rgba(93, 10, 10, 0.825)), url(../images/tv-banshee-breaking-bad-vikings-wallpaper.jpg);
+=======
+  background-image: linear-gradient(to bottom, rgba(93, 10, 10, 0.825), rgba(77, 70, 70, 0.79)), url(../images/tv-banshee-breaking-bad-vikings-wallpaper.jpg);
+>>>>>>> 36932d09032847498a8d8008e9d093601c2bfe0b
 }
 
 
@@ -77,7 +81,11 @@ padding: 0px 0px 10px 0px;
 
 
 body {
+<<<<<<< HEAD
  background-image: linear-gradient(to bottom, rgba(93, 10, 10, 0.825), rgba(93, 10, 10, 0.825)), url(../images/tv-banshee-breaking-bad-vikings-wallpaper.jpg);
+=======
+  background-image: linear-gradient(to bottom, rgba(93, 10, 10, 0.825), rgba(77, 70, 70, 0.79)), url(../images/tv-banshee-breaking-bad-vikings-wallpaper.jpg);
+>>>>>>> 36932d09032847498a8d8008e9d093601c2bfe0b
   font-family: 'Open Sans', sans-serif;
   color:#4e4e4e;
   line-height: 22px;
@@ -655,5 +663,8 @@ display: block;
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 36932d09032847498a8d8008e9d093601c2bfe0b

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 fetch('http://16.170.110.9:8081/swagger/register')
   .then(response => response.json())
   .then(data => {
@@ -8,6 +9,9 @@ fetch('http://16.170.110.9:8081/swagger/register')
     // Handle any errors that may occur
     console.error(error);
   });
+=======
+
+>>>>>>> 36932d09032847498a8d8008e9d093601c2bfe0b
 
 function validateName() {
     const nameInput = document.getElementById("name");
