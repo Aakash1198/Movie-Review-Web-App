@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>CinemaScope</title>
+	
+	<!-- core CSS -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/font-awesome.min.css" rel="stylesheet">
+  <link href="../css/animate.min.css" rel="stylesheet">
+  <link href="../css/main.css" rel="stylesheet">
+  <link href="../css/responsive.css" rel="stylesheet">
+  <link href="./logincss.css" rel="stylesheet">
+       
+  <link rel="shortcut icon" href="../images/favicon.ico">
+  <script src="../js/script.js"></script>
+  <script src="../js/jquery.js"></script>
+  <script src="../../js/bootstrap.min.js"></script>
+  <script src="../js/jquery.isotope.min.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/wow.min.js"></script>
+  <script src="./signup.js"></script>
+</head>
+
+<body class="homepage">
+
+  <header id="header">
+    <nav class="navbar navbar-inverse" role="banner">
+        <div class="container">
+          
+            <div class="navbar-header">                    
+                <svg version="1.2" width="0" height="0" viewBox="0 0 740 600">
+                    <defs>
+                      <clipPath id="mask">
+                        <rect x="0" y="0" width="900" height="800" fill="#000" id="cool_shape">
+                          <animate attributeType="XML" xlink:href="#cool_shape" attributeName="x" from="-900" to="0"
+                              dur="5s" repeatCount="indefinite"/>
+                        </rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                <a class="navbar-brand" href="../index.html"><img src="https://images.cooltext.com/5649297.png" width="360" height="99" alt="CinemaScope" /></a>
+            </div>
+    
+            <div class="collapse navbar-collapse navbar-right">
+              <ul class="nav navbar-nav">
+                  <li><a href="../index.html">Home</a></li>
+                  <li class="active"><a href="./login.html">Login</a></li>
+                  <li>
+                    <button class="logo" onclick="openNav()">☰</button>
+                      <div id="mySidebar" class="sidebar" onclick="closeNav()">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                          <ul>
+                        <li><a href="../personal-info.html">My account</a></li>
+                        <li><a href="../index.html"  class="current">Home</a></li>
+                        <li><div class="dropdown">
+                            <div class="drpbtn" onmouseover="myFunction2()"><a href="../tvshows.html">Tv Shows</a></div>
+                            <div id="dropdown-content">
+                                <a href="../tvshows.html">Latest</a>
+                                <a href="../tvshows.html">Top Rated</a>
+                            </div>
+                            </div>
+                        </li>
+                        <li><div class="dropdown">
+                            <div class="drpbtn" onmouseover="myFunction3()"><a href="../movies.html">Movies</a></div>
+                          <div id="dropdown-content1">
+                              <a href="../movies.html">Latest</a>
+                              <a href="../movies.html">Top Rated</a>
+                          </div>
+                          </div>
+                      </li>
+                                        
+                  </li>                        
+            </ul>
+                
+            </div>
+        </div><!--/.container-->
+    </nav><!--/nav-->
+
+</header><!--/header-->
+
+    <section>
+        <div class="container1">
+          <div class="title">Sign-up</div>
+            <form name="myform"  method="post" required>
+            <div class="field">
+              <input type="text" id="name" name="name" onmouseout="validateName()" required>
+              <label for="name">User Name:</label>
+              <span id="nameError"></span><br><br>
+            </div>
+            <div class="field">
+              <input type="email" id="email" name="email" onmouseout="validateEmail()"required>
+              <label for="email">Email:</label>
+              <span id="emailError"></span><br><br>
+            </div>
+            <div class="field">
+              <label for="phone">Phone:</label>
+		          <input type="tel" id="phone" name="phone" onmouseout="validatePhone()" required>
+		        <span id="phoneError"></span><br><br>
+            </div>
+            <div class="field">
+              <input type="password" id="password" name="password" onmouseout="validatePassword()" required>
+              <label for="password">Password:</label>
+              <span id="passwordError"></span><br><br>
+            </div>
+            <div class="field">
+              <input type="password" id="confirm-password" name="confirm-password" onmouseout="validateConfirmPassword()" required>
+              <label for="confirm-password">Confirm Password:</label>
+              <span id="confirmPasswordError"></span><br><br>
+            </div>
+
+            <div class="field">
+               <input type="submit" value="Submit">
+            </div>
+            <div class="signup-link">Already a member? <a href="./login.html">Login now</a></div>
+          </form>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+
+    <footer id="footer" class="midnight-blue">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-6">
+                  &copy; 2023 <a target="_blank" href="index.html">CinemaScope</a>. All Rights Reserved.
+              </div>
+              <div class="col-sm-6">
+                  <ul class="pull-right">
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">About Us</a></li>
+                      <li><a href="#">Faq</a></li>
+                      <li><a href="#">Contact Us</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </footer><!--/#footer-->
+
+
+</body>
+</html>
