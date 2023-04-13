@@ -1,0 +1,165 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,300,800);
+
+
+/***********************
+********* section ******
+************************/
+section{
+    clear: left;
+    float: none;
+    width: 100%;
+    text-align: center;
+    background-image:linear-gradient(to bottom, rgba(93, 10, 10, 0.825), rgba(77, 70, 70, 0.79)), url(../images/tv-banshee-breaking-bad-vikings-wallpaper.jpg);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5rem 0 10rem;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    top:80px;
+
+}
+#footer{
+  top: 80px;
+}
+/*Styling the container1 class which cotains a form in it*/
+.container1{
+    width: 500px;
+    border-radius: 15px;
+    box-shadow: 0px 15px 20px rgba(254, 254, 254, 0.658);
+    justify-content: center;
+	background: #2322225c;
+    
+
+}
+/*Styling the title of the container1 class */
+.container1 .title{
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 100px;
+  color:#ffff;
+  user-select: none;
+  border-radius: 15px 15px 0 0;
+  background: linear-gradient(-170deg, #c52d2f, #ffffff37);
+}
+
+/*Styling the form of the container1 class, input fields,labels, signup-link in the form div classes */
+.container1 form{
+  padding: 10px 30px 50px 30px;
+  height: auto;
+}
+.container1 form .field{
+	height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+.container1 form .field input, .field textarea{
+     height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 20px;
+    border: 1px solid lightgrey;
+    border-radius: 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.container1 form .field input:focus,
+form .field input:valid, .field select:focus, .field select:valid{
+  border-color: #c52d2f; 
+}
+.container1 form .field label{
+ position: absolute;
+    top: 50%;
+    left: 20px;
+    color: #999999;
+    font-weight: 100;
+    font-size: 15px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+form .field input:focus ~ label,
+form .field input:valid ~ label,
+form .field select:focus ~ label,
+form .field select:valid ~ label{
+  top: 0%;
+  font-size:20px;
+  color: #c52d2f;
+  background: #ffffff;
+  transform: translateY(-50%);
+
+}
+
+form .field input[type="submit"]{
+  color: #fff;
+  border: none;
+  padding-left: 0;
+  font-size: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  background: linear-gradient(-170deg, #c52d2f, #ffffff37);
+  transition: all 0.3s ease;
+}
+
+form .content{
+	display: flex;
+	width: 100%;
+	height: 50px;
+	font-size: 20px;
+	align-items: center;
+	justify-content: space-around;
+  }
+  form .content .checkbox{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+
+  form .content input{
+	width: 15px;
+	height: 15px;
+	background: red;
+  }
+  form .content input[type="checkbox"]{
+	position: relative;
+	left: 0px;
+  }
+  form .content label{
+	color: #ffffff;
+	user-select: none;
+	padding-left: 5px;
+  }
+  form .content .pass-link{
+	color:#ffffff;
+  }
+form .field input[type="submit"]:active{
+  transform: scale(0.95);
+}
+
+
+label{
+	display: flex;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    top: 30px;
+	left: 130px;
+    position: relative;
+}
+h2{
+	top:20px;
+	position: relative;
+}
+
+span {
+    color: red;
+    font-size: 20px;
+    top: 5px;
+    left: 55px;
+    position: relative;
+}
+#passwordError {
+        color: red;
+      }

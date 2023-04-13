@@ -1,0 +1,125 @@
+.button-group {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  
+}
+#wrapper{
+  top:100px;
+}
+
+body{
+  margin-bottom: 100px;
+}
+
+#wrapper button{
+  box-sizing: border-box;
+  
+  background:none;
+  border: 2px solid red;
+  border-radius: 0.6em;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+#wrapper button:hover{
+  background-color: red;
+}
+
+#wrapper button.active{
+  background-color: red;
+}
+/* Set active style for selected button */
+/* .show-all .active {
+  
+ background-color: #ff0000;
+}
+.show-latest .active {
+  
+  background-color: #ff0000;
+ }
+
+ .show-toprated .active {
+  
+  background-color: #ff0000;
+ } */
+/* Set default style for carousel container */
+#carousel_2 {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Set default style for carousel content */
+#content_2 {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+/* Set default style for carousel item */
+.tile .item {
+  flex: 0 0 auto;
+  /* width: 200px; */
+  
+  border-radius: 10px;
+}
+
+.tile{
+  display: inline-flex;
+  flex-wrap: no-wrap;
+  flex-basis: 16%; /* Change the flex-basis to 20% */
+  background: transparent;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  flex-direction: column;
+}
+/* Set style for wrapper container */
+#wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tile .title{
+    display:none;
+    font-weight: 600;
+    
+    color: red;
+    font-size: 30px;
+    text-align: center;
+    background-color: white;
+    backdrop-filter: blur(8px) brightness(80%);
+}
+
+.tile:hover {
+    
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.4);
+    background-color: white;
+    
+}
+
+.tile:hover .title{
+  display: block;
+
+}
+
+.box{
+  width: auto;
+
+}
+
+

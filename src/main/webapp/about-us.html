@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>CinemaScope</title>
+
+<!-- core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/animate.min.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+      
+<link rel="shortcut icon" href="images/favicon.ico">
+<script src="js/script.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.isotope.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/wow.min.js"></script>
+
+
+
+<style>
+
+.about_section{
+	display : block;
+	top : 20px
+}
+
+.about_section .img-box img {
+	max-width: 100%;
+    max-height: 700px;
+}
+
+.about_section .container{
+	width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.about_section .detail-box{
+	top: 80px;
+    position: relative;
+    max-width: 100%;
+}
+
+.detail-box p{
+	color: white;
+    font-size: 25px;
+    font-style: oblique;
+    line-height: 1.25;
+}
+
+.detail-box .heading_container h2{
+	color: beige;
+    bottom: 50px;
+    position: relative;
+}
+
+#footer{
+top: 10px;
+}
+
+</style>
+
+</head>
+
+<body class="homepage">
+
+<header id="header">
+    <nav class="navbar navbar-inverse" role="banner">
+        <div class="container">
+          
+            <div class="navbar-header">                    
+                <svg version="1.2" width="0" height="0" viewBox="0 0 740 600">
+                    <defs>
+                      <clipPath id="mask">
+                        <rect x="0" y="0" width="900" height="800" fill="#000" id="cool_shape">
+                          <animate attributeType="XML" xlink:href="#cool_shape" attributeName="x" from="-900" to="0"
+                              dur="5s" repeatCount="indefinite"/>
+                        </rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                <a class="navbar-brand" href="index.html"><img src="https://images.cooltext.com/5649297.png" width="360" height="99" alt="CinemaScope" /></a>
+            </div>
+    
+            <div class="collapse navbar-collapse navbar-right">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="./Login-Registration/login.html">Login</a></li>
+                    <li>
+                      <button class="logo" onclick="openNav()">☰</button>
+                        <div id="mySidebar" class="sidebar" onclick="closeNav()">
+                          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                          <ul>
+                            <li><a href="./index.html"  class="current">Home</a></li>                                
+                                            <li><div class="dropdown">
+                                                <div class="drpbtn" onmouseover="myFunction2()"><a href ="./movies.html">Movies</a> </div>
+                                                <div id="dropdown-content">
+                                                    <a href="./movies.html">Latest</a>
+                                                    <a href="./movies.html">Top Rated</a>
+                                                </div>
+                                                </div>
+                                            </li>
+                                            
+                                            <li><div class="dropdown">
+                                            
+                                              <div class="drpbtn" onmouseover="myFunction3()"><a href="./tvshows.html">Tv Shows</a></div>
+                                              <div id="dropdown-content1">
+                                                  <a href="./tvshows.html">Latest</a>
+                                                  <a href="./tvshows.html">Top Rated</a>
+                                              </div>
+                                              </div>
+                                          </li>
+                                            
+                      </li> 
+                       <li><a href="./about-us.html">About US</a></li> 
+                        <li><a href="./contact-us.html">Contact Us</a></li>                       
+                </ul>
+                
+            </div>
+        </div><!--/.container-->
+    </nav><!--/nav-->
+
+</header><!--/header-->
+
+<section class="about_section ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="images/about-img2.png" alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                About Us
+              </h2>
+            </div>
+            <p>
+              Cinemascope is a movie and TV show review website that provides comprehensive and insightful analyses of the latest releases in the entertainment industry.
+              Our website's design is sleek and user-friendly, allowing users to easily navigate through our extensive collection of reviews. 
+            </p> 
+            <br>
+            <p>One of the standout features of Cinemascope is our team of expert reviewers. Each review is written by a team of experienced critics who have a deep understanding of film and TV. Their reviews are engaging and insightful, 
+            providing readers with a detailed analysis of each film or TV show's plot, cinematography, acting, and overall quality. 
+            Additionally, our site provides users with a rating system that allows them to quickly gauge the overall quality of a movie or TV show.</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+<!-- Footer -->
+<footer id="footer" class="midnight-blue">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                &copy; 2023 <a target="_blank" href="index.html">CinemaScope</a>. All Rights Reserved.
+            </div>
+            <div class="col-sm-6">
+                <ul class="pull-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer><!--/#footer-->
+</body>
+</html>
