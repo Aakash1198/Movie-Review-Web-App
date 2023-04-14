@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 // Get the form element
 const form = document.querySelector('#login-form');
@@ -29,8 +29,6 @@ fetch('http://16.170.110.9:8081/login', {
 
 
 
-=======
->>>>>>> 36932d09032847498a8d8008e9d093601c2bfe0b
 function validateLoginForm() {
     const emailInput = document.getElementById("email");
     const emailError = document.getElementById("emailError");
