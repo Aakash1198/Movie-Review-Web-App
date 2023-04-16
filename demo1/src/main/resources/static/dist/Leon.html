@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>CinemaScope</title>
+	
+	<!-- core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/movie_titles.css" rel="stylesheet">
+         
+    <link rel="shortcut icon" href="images/favicon.ico">
+    
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <meta http-equiv="X-pUA-Compatible" content="ie=edge" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    
+    <script>
+    
+    $(document).ready(function() {
+        teansacList();
+    });
+
+    function teansacList() {
+    	$.ajax({
+    	    url: 'http://127.0.0.1:8081/swagger/find_tv_show',
+    	    type: "POST",
+    	    dataType: "json",
+    	    data: {'media_type': 1},
+    	    success: function(json) {
+    	        console.log(json.result);
+
+    	        const movie_id = 4; // example movie_id to match
+
+    	        const details = []; // initialize details as an empty array
+
+    	        for (let i = 0; i < json.result.length; i++) {
+    	            if (json.result[i].media_id === movie_id) { // compare with media_id property
+    	                details.push(json.result[i]); // add the matching sub-object to details
+    	            }
+    	        }
+
+    	        console.log(details);
+
+    	        const directors = details[0].directors || ''; // Array of directors
+    	        const box = details[0].box || ''; // String value of box
+    	        const media_classify = details[0].media_classify || []; // Array of media_classify
+    	        const actors = details[0].actors || []; // Array of actors
+    	        const media_type = details[0].media_type || ''; // Number value of media_type
+    	        const release_date = details[0].release_date || ''; // String value of release_date
+    	        const media_id = details[0].media_id || ''; // Number value of media_id
+    	        const media_name = details[0].media_name || ''; // String value of media_name
+    	        const time = details[0].time || ''; // String value of time
+    	        const introduction = details[0].introduction || ''; // String value of introduction
+
+    	        // Outputting extracted elements
+    	        console.log("Directors: ", directors);
+    	        console.log("Box: ", box);
+    	        console.log("Media Classify: ", media_classify);
+    	        console.log("Actors: ", actors);
+    	        console.log("Media Type: ", media_type);
+    	        console.log("Release Date: ", release_date);
+    	        console.log("Media ID: ", media_id);
+    	        console.log("Media Name: ", media_name);
+    	        console.log("Time: ", time);
+    	        console.log("Introduction: ", introduction);
+    	        
+    	        
+    	        var html = '',
+    	        html = html +'<p>' + directors +'</p>'
+    	        $('#directorValue').append(html);
+    	        
+    	        var html = '',
+    	        html = html +'<p>' +box +'</p>'
+    	        $('#boxValue').append(html);
+    	        
+    	        var html = '',
+    	        html = html +'<p>' + media_classify +'</p>'
+    	        $('#mediaClassify').append(html);
+    	        
+    	        var html = '',
+    	        html = html +'<p>' + actors +'</p>'
+    	        $('#actorsValue').append(html);
+    	        
+    	        var html = '',
+    	        html = html +'<p>' + release_date +'</p>'
+    	        $('#releaseDateValue').append(html);
+    	        
+    	        var html = '',
+    	        html = html +'<p>' + media_name +'</p>'
+    	        $('#mediaNameValue').append(html);
+    	        
+    	        var html = '',
+    	        html = html +'<p>' + time +'</p>'
+    	        $('#timeValue').append(html);
+    	        
+    	        var html = '',
+    	        html = html +'<p>' + introduction +'</p>'
+    	        $('#introductionValue').append(html);
+    	        
+    	      
+    	        
+    	        
+    	        
+    	       
+    	   
+
+    	        
+    	   
+    	        document.getElementById('directorValue').textContent = directors;
+    	        document.getElementById('boxValue').textContent = box;
+    	        document.getElementById('mediaClassify').textContent = media_classify.join(', ');
+    	        document.getElementById('actorsValue').textContent =  actors.join(', ');
+    	        document.getElementById('mediaTypeValue').textContent =  media_type;
+    	        document.getElementById('releaseDateValue').textContent = release_date;
+    	        document.getElementById('mediaIdValue').textContent = "Media ID: " + media_id;
+    	        document.getElementById('mediaNameValue').textContent =  media_name;
+    	        document.getElementById('timeValue').textContent = time;
+    	        document.getElementById('introductionValue').textContent =  introduction;
+    	        
+    	        
+    	       
+    	    },
+    	    error: function(xhr, status, error) {
+    	        console.error("Error: ", error); // Log the error to console
+    	        // Handle the error as needed
+    	    }
+    	});
+    }
+
+
+    
+    </script>
+    
+</head>
+
+<body class="homepage">
+
+    <header id="header">
+        <nav class="navbar navbar-inverse" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <svg version="1.2" width="0" height="0" viewBox="0 0 740 600">
+                        <defs>
+                          <clipPath id="mask">
+                            <rect x="0" y="0" width="900" height="800" fill="#000" id="cool_shape">
+                              <animate attributeType="XML" xlink:href="#cool_shape" attributeName="x" from="-900" to="0"
+                                  dur="5s" repeatCount="indefinite"/>
+                            </rect>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    <a class="navbar-brand" href="index.html"><img src="https://images.cooltext.com/5649297.png" width="360" height="99" alt="CinemaScope" /></a>
+                </div>
+				
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>                      
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                        <li><a href="./Login-Registration/login.html">Login</a></li>
+                        <li><input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
+                            <label for="menu-icon"></label>
+                            <nav class="nav-menu"> 		
+                                <ul class="pt-5">
+                                    <li><a href="#">MOVIES</a></li>
+                                    <li><a href="#">TVSHOWS</a></li>
+                                    <li><a href="#">AWARDS & EVENTS</a></li>
+                                    <li><a href="#">CELEBRITIES</a></li>
+                                </ul>
+                            </nav></li>                        
+                    </ul>
+                    
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+		
+    </header><!--/header-->
+    
+     <div class="container-fluid d-flex align-items-center mb-5 py-5" id="home" style="min-height: 100vh;">
+        <div class="container wow fadeInDown">
+            <div class="row1 align-items-center">
+                <div class="col-lg-7 text-center">   
+                    <h3 class="text-white font-weight-normal mb-3" style="-webkit-text-stroke: 1px #ffffff">WELCOME</h3>
+                    <h1 class="display-3 text-uppercase mb-2" style="-webkit-text-stroke: 4px #ffffff;">Ultimate destination for insightful and informative reviews of the latest films and TV series</h1>
+                        
+                </div>        
+        </div>
+    </div>
+  
+   
+
+    
+    <!-------------------------------------main body-------------------------------------------->
+  
+		<!-- transformers area start -->
+		<section class="transformers-area">
+			<div class="container">
+				<div class="transformers-box">
+					<div class="row flexbox-center">
+						<div class="col-lg-5 text-lg-left text-center">
+							<div class="transformers-content">
+								<img src="images/leon.jpg" alt="about" />
+							</div>
+						</div>
+						<div class="col-lg-7">
+							<div class="transformers-content">
+								
+								<div id="media_name"></div>
+								<h2 id="mediaNameValue"></h2>
+								<p id="mediaClassify" ></p>
+								<ul>
+									<li>
+										<div class="transformers-left">
+											IMDB Rating:
+										</div>
+										<div class="transformers-right">
+											<span class="imdbRatingPlugin" data-user="ur164117669" data-title="tt10366206" data-style="p4"><a href="https://www.imdb.com/title/tt10366206/?ref_=plg_rt_1"><img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_31x14.png" alt="John Wick: Chapter 4 (2023) on IMDb" />
+</a></span><script>(function(d,s,id){var js,stags=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}js=d.createElement(s);js.id=id;js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";stags.parentNode.insertBefore(js,stags);})(document,"script","imdb-rating-api");</script>
+										</div>
+									</li>
+									<li>
+										<div class="transformers-left">
+											Release date:
+										</div>
+										<div class="transformers-right">
+											  <p id="releaseDateValue"></p>
+										</div>
+									</li>
+									<li>
+										<div class="transformers-left">
+											Director:
+										</div>
+										<div class="transformers-right">
+											<div id="directorValue"></div>
+										</div>
+									</li>
+									<li>
+										<div class="transformers-left">
+											Cast:
+										</div>
+										<div class="transformers-right">
+											<div id="actorsValue"></div>
+										</div>
+									</li>
+									<li>
+										<div class="transformers-left">
+											Time: 
+										</div>
+										<div class="transformers-right">
+										<div id="timeValue"></div>
+										</div>
+									</li>
+									<li>
+										<div class="transformers-left">
+											Box:
+										</div>
+										<div class="transformers-right">
+											<div id="boxValue"></div>
+										</div>
+									</li>
+					
+									<li>
+									</li>
+									<li>
+										
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!-- transformers area end -->
+		<!-- details area start -->
+		<section class="details-area">
+			<div class="container">
+				<div class="row">
+						<div class="details-content">
+							<div class="details-overview">
+								<h2>Overview</h2>
+								 <p3 id="introductionValue"></p3>
+							</div>
+		
+		 			  
+          <div class="contact-col">
+        <h2>User Review!</h2>
+        <form id="commentForm">
+            <input type="text" id="name" placeholder="Enter your name" required>
+            <input class="input" id="title" type="text" placeholder="Enter your title" required>
+            <textarea rows="7" id="message" placeholder="Message" required></textarea>
+            <button type="submit" value="Submit" class="hero-btn">Send Message</button>
+        </form>
+    </div>
+    <br>
+    
+    <div class="table">
+    <table id="commenttable">
+        <tr>
+            <th>Name</th>
+            <th>Title</th>
+            <th>Message</th>
+        </tr>
+    </table>
+    </div>
+
+    <script>
+ // Function to handle form submission
+   function submitComment(event) {
+    event.preventDefault(); // Prevent form submission
+    var name = document.getElementById("name").value;
+    var title = document.getElementById("title").value;
+    var message = document.getElementById("message").value;
+
+    if (name === "" || title === "" || message === "") {
+        alert("Please fill in all fields.");
+        return;
+    }
+
+    // Store data in local storage
+    var comments = localStorage.getItem("comments");
+    if (comments === null) {
+        comments = [];
+    } else {
+        comments = JSON.parse(comments);
+    }
+
+    var newComment = {
+        name: name,
+        title: title,
+        message: message
+    };
+    comments.push(newComment);
+    localStorage.setItem("comments", JSON.stringify(comments));
+
+    // Append data to the table
+    var table = document.getElementById("commenttable");
+    var newRow = table.insertRow();
+    var nameCell = newRow.insertCell();
+    var titleCell = newRow.insertCell();
+    var messageCell = newRow.insertCell();
+   // var deleteCell = newRow.insertCell();
+    nameCell.textContent = name;
+    titleCell.textContent = title;
+    messageCell.textContent = message;
+
+    // Create delete button
+    var deleteButton = document.createElement("span");
+    deleteButton.innerHTML = "&#x2716;"; // "x" icon as HTML entity
+    deleteButton.style.cursor = "pointer"; // Add pointer cursor
+    deleteButton.addEventListener("click", function() {
+        deleteComment(newComment);
+    });
+    deleteCell.appendChild(deleteButton);
+
+    // Add delete button as a sibling element
+    newRow.insertAdjacentElement('beforeend', deleteButton);
+
+    // Clear form fields
+    document.getElementById("name").value = "";
+    document.getElementById("title").value = "";
+    document.getElementById("message").value = "";
+}
+
+// Delete a specific comment from the table and local storage
+function deleteComment(comment) {
+    var comments = localStorage.getItem("comments");
+    if (comments !== null) {
+        comments = JSON.parse(comments);
+        for (var i = 0; i < comments.length; i++) {
+            if (comments[i].name === comment.name && comments[i].title === comment.title && comments[i].message === comment.message) {
+                comments.splice(i, 1);
+                localStorage.setItem("comments", JSON.stringify(comments));
+                location.reload(); // Refresh the page to update the table
+                return;
+            }
+        }
+    }
+}
+
+// Add event listener to the form
+document.getElementById("commentForm").addEventListener("submit", submitComment);
+
+// Load comments from local storage and populate the table
+window.addEventListener("load", function() {
+    var comments = localStorage.getItem("comments");
+    if (comments !== null) {
+        comments = JSON.parse(comments);
+        var table = document.getElementById("commenttable");
+        for (var i = 0; i < comments.length; i++) {
+            var newRow = table.insertRow();
+            var nameCell = newRow.insertCell();
+            var titleCell = newRow.insertCell();
+            var messageCell = newRow.insertCell();
+          //  var deleteCell = newRow.insertCell();
+            nameCell.textContent = comments[i].name;
+            titleCell.textContent = comments[i].title;
+            messageCell.textContent = comments[i].message;
+
+            // Create delete button
+          var deleteButton = document.createElement("span");
+deleteButton.innerHTML = "&#x2716;"; // "x" icon as HTML entity
+deleteButton.style.cursor = "pointer"; // Add pointer cursor
+deleteButton.style.paddingLeft = "10px"; // Add left padding of 10px
+deleteButton.addEventListener("click", (function(comment) {
+    return function() {
+        deleteComment(comment);
+    }
+})(comments[i]));
+
+            
+            // Add delete button as a sibling element
+            newRow.insertAdjacentElement('beforeend', deleteButton);
+        }
+    }
+});
+
+    </script>
+
+    
+    <!--------------dynamic table to display the entries-------------------->
+    
+    <!--  
+    <div class ='reviews'>
+     <div class ='commentbox'>
+    	<div class='leftimg'> HM </div>
+    	<div class='rightcmt'>
+    	
+    	</div>
+    --->
+    
+     </div>
+    </div>
+    <!-------
+    <div class="table">
+    <table id="tb1">
+            <tr>
+                <th>Name</th>
+                <th>Ratings</th>
+                <th>Email</th>
+                <th>Subject</th>
+                <th>Message</th>
+            </tr>
+    </table>
+    </div>
+        
+   ---->
+    
+
+						</div>
+					</div>
+			</div>
+		</section><!-- details area end -->
+    <!-- ------------------------------footer-------------------------------->
+    
+    <footer id="footer" class="midnight-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    &copy; 2023 <a target="_blank" href="index.html">CinemaScope</a>. All Rights Reserved.
+                </div>
+                <div class="col-sm-6">
+                    <ul class="pull-right">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Faq</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+    
+    </body>
+    </html>

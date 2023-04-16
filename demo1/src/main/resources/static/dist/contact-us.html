@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>CinemaScope</title>
+	
+	<!-- core CSS -->
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <link href="./css/font-awesome.min.css" rel="stylesheet">
+  <link href="./css/animate.min.css" rel="stylesheet">
+  <link href="./css/main.css" rel="stylesheet">
+  <link href="./css/responsive.css" rel="stylesheet">
+  <link href="./css/contact-us.css" rel="stylesheet">
+       
+  <link rel="shortcut icon" href="./images/favicon.ico">
+  <script src="./js/script.js"></script>
+  <script src="./js/jquery.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/jquery.isotope.min.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/wow.min.js"></script>
+</head>
+
+<body class="homepage">
+
+  <header id="header">
+    <nav class="navbar navbar-inverse" role="banner">
+        <div class="container">
+          
+            <div class="navbar-header">                    
+                <svg version="1.2" width="0" height="0" viewBox="0 0 740 600">
+                    <defs>
+                      <clipPath id="mask">
+                        <rect x="0" y="0" width="900" height="800" fill="#000" id="cool_shape">
+                          <animate attributeType="XML" xlink:href="#cool_shape" attributeName="x" from="-900" to="0"
+                              dur="5s" repeatCount="indefinite"/>
+                        </rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                <a class="navbar-brand" href="index.html"><img src="https://images.cooltext.com/5649297.png" width="360" height="99" alt="CinemaScope" /></a>
+            </div>
+    
+            <div class="collapse navbar-collapse navbar-right">
+              <ul class="nav navbar-nav">
+                  <li><a href="./index.html">Home</a></li>
+                  <li class="active"><a href="Login-Registration/login.html">Login</a></li>
+                  <li>
+                    <button class="logo" onclick="openNav()">☰</button>
+                      <div id="mySidebar" class="sidebar" onclick="closeNav()">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                          <ul>
+                        <li><a href="./index.html"  class="current">Home</a></li>
+                        <li><div class="dropdown">
+                            <div class="drpbtn" onmouseover="myFunction2()"><a href="./tvshows.html">Tv Shows</a></div>
+                            <div id="dropdown-content">
+                                <a href="./tvshows.html">Latest</a>
+                                <a href="./tvshows.html">Top Rated</a>
+                            </div>
+                            </div>
+                        </li>
+                        <li><div class="dropdown">
+                            <div class="drpbtn" onmouseover="myFunction3()"><a href="./movies.html">Movies</a></div>
+                          <div id="dropdown-content1">
+                              <a href="./movies.html">Latest</a>
+                              <a href="./movies.html">Top Rated</a>
+                          </div>
+                          </div>
+                      </li>
+                                        
+                  </li>  
+                   <li><a href="./about-us.html">About Us</a></li>
+                   <li><a href="./contact-us.html">Contact Us</a></li>                       
+            </ul>
+                
+            </div>
+        </div><!--/.container-->
+    </nav><!--/nav-->
+
+</header><!--/header-->
+
+  <section>
+    <div class="container1">
+    <div class="title">Contact Information</div>
+
+
+      <div class="field">
+        <label for="phone">Call us:</label>
+        <span id="phone">123-456-7890</span>
+      </div>
+        <h2>Send your Query</h2>
+      <form id="form">
+ 
+  <div class="field">
+    <label for="">Name</label>
+    <input type="text" name="name" placeholder="Your Full Name" required>
+  </div>
+  
+  <div class="field">
+    <label for="">Email</label>
+    <input type="email" name="email" placeholder="Your email" required>
+  </div>
+  
+  <div class="field">
+    <label for="content">Message</label>
+    <textarea name="content"  placeholder="Your message" required></textarea>
+  </div>
+
+  <div class="field">
+    <input type="submit">Submit Form/>
+  </div>
+</form>
+
+    </div>
+  </section>
+
+
+
+    <!-- Footer -->
+
+    <footer id="footer" class="midnight-blue">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-6">
+                  &copy; 2023 <a target="_blank" href="index.html">CinemaScope</a>. All Rights Reserved.
+              </div>
+              <div class="col-sm-6">
+                  <ul class="pull-right">
+                      <li><a href="./index.html">Home</a></li>
+                      <li><a href="./about-us.html">About Us</a></li>
+                      <li><a href="./contact-us.html">Contact Us</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </footer><!--/#footer-->
+
+
+
+
+<script>
+
+document.querySelector('button').addEventListener('click', (e)=>{
+  e.preventDefault();
+  const contactForm = document.querySelector('#form');
+  const name = document.querySelector('[name="name"]');
+  const email = document.querySelector('[name="email"]');
+  const message = document.querySelector('[name="content"]');
+  // validation before sending the data
+  if(name.value.length===0 || name.value.length===0 || name.value.length===0){
+    alert('please fill the inputs')
+  }else{
+    let data = new FormData(contactForm);  
+    fetch("_url_here", { method: "POST", body: data });
+    alert('Thank you. your form was submited');
+    contactForm.reset()
+  }
+})
+
+</script>
+</body>
+</html>
+
