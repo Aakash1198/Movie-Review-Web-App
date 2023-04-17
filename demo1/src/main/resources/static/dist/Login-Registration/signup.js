@@ -1,4 +1,4 @@
-fetch('http://127.0.0.1:8081/swagger/register')
+fetch('http://74.121.150.252:8081/swagger/register')
   .then(response => response.json())
   .then(data => {
     // Process the response data here
